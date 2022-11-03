@@ -11,14 +11,14 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private UserRepo repository;
+    private UserRepo UserRepository;
 
     public User addUser(User user){
-        return repository.save(user);
+        return UserRepository.save(user);
     }
 
     public List<User> findAll(){
-        return repository.findAll();
+        return UserRepository.findAll();
     }
 
 }

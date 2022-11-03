@@ -13,12 +13,9 @@ import javax.persistence.*;
 @Entity
 public class Post {
     @Id
-    @GeneratedValue
-    private long id;
+    private int id;
     private String title;
     private String content;
     private String author;
-    @ManyToOne
-    @JoinColumn
-    private User user;
+
 }

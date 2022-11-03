@@ -13,9 +13,10 @@ import java.util.List;
 @Entity
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    @OneToMany(mappedBy = "user")
-    List<Post> posts;
+    @OneToMany
+    @JoinColumn(name = "id_user")
+    private List<Post> posts;
 }
